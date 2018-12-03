@@ -1,0 +1,72 @@
+body {
+	margin: 0;
+	padding: 0;
+	font-family: andada;
+	text-align: center;
+	background-color: #F1F1F1;
+}
+
+h1 {
+	color: darkgrey;
+	font-size: 40px;
+	text-shadow: 0px 2px 1px white;
+}
+
+table {
+	width: 50%;
+}
+
+th {
+	border-bottom: 2px solid red;
+	text-align: left;
+	font-size: 25px;
+	text-shadow: 0px 1px 1px grey;
+}
+
+td {
+	vertical-align: top;
+	padding: 15px 30px 0px 0px;
+	width: 50%;
+}
+
+.kiri {
+	padding-right: 50px;
+}
+
+input, select, textarea {
+	width: 100%;
+	border: none;
+	border-radius: 10px;
+	padding: 15px 15px;
+	box-shadow: 0px 1px 1px darkgrey;
+}
+
+select {
+	width: 110%;
+}
+
+button {
+	border: none;
+	border-radius: 10px;
+	padding: 15px 15px;
+	box-shadow: 0px 1px 1px darkgrey;
+	width: 50%;
+	background-color: #E74C3C;
+	cursor: pointer;
+}
+
+a {
+	color: white;
+	font-size: 15px;
+	font-family: andada;
+	text-decoration: none;
+}
+
+.tabelindex {
+	width: 75%;
+}
+
+.tomboltambah {
+	width: 20%;
+	height: 50%;
+}

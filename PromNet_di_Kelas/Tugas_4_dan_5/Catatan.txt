@@ -1,0 +1,2 @@
+Tugas 4	: Membuat google cloud + memuat profil diri
+Tugas 5 : Memuat CI pada google cloud + penggunaan Database
