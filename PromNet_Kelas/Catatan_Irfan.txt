@@ -1,0 +1,33 @@
+Fiture Tambah Mysql dan PHP:
+1) Primary Key (generate otomatis)	(Belum)
+2) Penyesuaian Domain Integrity		(Belum)
+3) Penyesuaian Referential Integrity (Mysql = Sudah)
+4) Show Error From Mysql (Mysql dan PHP = Sudah)
+
+Procedure yang belum:
+1) String Max dan Empty String (kecuali No_Telepon) error
+2) Int Min dan Max error
+3) Primary Key Duplicate (Menggunakan Error Default yang disetting)
+   dan Empty String error
+4) Date Obat, 
+   Mengubah Field Status antara 
+   Expired dan Belum Expired (Optional)
+
+Batas Char Yang sama tiap tabel:
+1) Primary Key = 10
+2) Nama	= 40 		(Selesai)
+3) Alamat = 60		(Selesai)
+4) Jenis Kelamin = 1	(Selesai)
+5) Telepon = 15		(Selesai)
+6) Spesialisasi, Nama Kamar, 
+Nama Obat, Jenis Obat, Paket = 20	(Selesai)
+
+Batas Char Yang berbeda Tiap Tabel:
+Jenis Kamar = 10
+
+Batas Int tiap tabel
+1) Pasien
+Umur Pasien = 255 dengan length 3
+2) Transaksi
+Id_Transaksi = 65,535 dengan length 5
+Jumlah Pemesanan = 8
