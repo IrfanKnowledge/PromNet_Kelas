@@ -14,9 +14,15 @@ class C_karyawan extends CI_Controller
     /**
      * [index description] proses yang akan di buka saat pertama masuk ke controller
      */
-    public function index()
+    public function index($id=0)
     {//codeigniter cURL
-        $ch = curl_init($this->url);
+        if ($id==0) {
+            $ch = curl_init($this->url);
+        } else {
+            $new_url = $this->url . '/' . $id;
+            $ch = curl_init($new_url);
+        }
+
         curl_setopt($ch, CURLOPT_HTTPGET, true);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
         $response_json = curl_exec($ch);
@@ -57,7 +63,7 @@ class C_karyawan extends CI_Controller
 
         //$insert =  $this->curl->simple_post($this->API.'/Karyawan', $data, array(CURLOPT_BUFFERSIZE => 10));
 
-				if ($response) {
+        if ($response) {
             $this->session->set_flashdata('hasil', 'Insert Data Berhasil');
         } else {
             $this->session->set_flashdata('hasil', 'Insert Data Gagal');

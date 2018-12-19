@@ -274,8 +274,9 @@
 				<thead>
 					<tr>
 						<th>
-							ID
+							No
 						</th>
+						<th>ID</th>
 						<th>Name</th>
 						<th>Email</th>
 						<th>Address</th>
@@ -285,39 +286,46 @@
 				</thead>
 				<tbody>
 					<tr>
-						<?php
-                        $i=1;
-                        foreach ($karyawan as $key) {
-                            ?>
-							<td>
-								<?php echo $i; ?>
-							</td>
-							<td><?php echo $key->name; ?></td>
-							<td><?php echo $key->email; ?></td>
-							<td><?php echo $key->address; ?></td>
-							<td><?php echo $key->phone; ?></td>
-							<td>
-								<a id="edit" href="#editmodal" class="edit" data-toggle="modal" data-backdrop="static" data-keyboard="false"
-									data-id="<?php echo  $key->id; ?>"
-									data-name="<?php echo $key->name; ?>"
-									data-email="<?php echo $key->email; ?>"
-									data-address="<?php echo $key->address; ?>"
-									data-phone="<?php echo $key->phone; ?>">Edit
-								</a>
-								<a id="delete" href="#deletemodal" class="delete" data-toggle="modal"
-									data-id="<?php echo  $key->id; ?>"
-									data-name="<?php echo $key->name; ?>"
-									data-email="<?php echo $key->email; ?>"
-									data-address="<?php echo $key->address; ?>"
-									data-phone="<?php echo $key->phone; ?>">Delete
-								</a>
-							</td>
-							</td>
-						</tr>
-						<?php
-                        $i++;
-                        }
-                    ?>
+						<?php if (!empty($karyawan)): ?>
+							<?php
+                    $i=1;
+                    foreach ($karyawan as $key) {
+                        ?>
+								<td>
+									<?php echo $i; ?>
+								</td>
+								<td><?php echo $key->id ?></td>
+								<td><?php echo $key->name; ?></td>
+								<td><?php echo $key->email; ?></td>
+								<td><?php echo $key->address; ?></td>
+								<td><?php echo $key->phone; ?></td>
+								<td>
+									<a id="edit" href="#editmodal" class="edit" data-toggle="modal" data-backdrop="static" data-keyboard="false"
+										data-id="<?php echo  $key->id; ?>"
+										data-name="<?php echo $key->name; ?>"
+										data-email="<?php echo $key->email; ?>"
+										data-address="<?php echo $key->address; ?>"
+										data-phone="<?php echo $key->phone; ?>">Edit
+									</a>
+									<a id="delete" href="#deletemodal" class="delete" data-toggle="modal"
+										data-id="<?php echo  $key->id; ?>"
+										data-name="<?php echo $key->name; ?>"
+										data-email="<?php echo $key->email; ?>"
+										data-address="<?php echo $key->address; ?>"
+										data-phone="<?php echo $key->phone; ?>">Delete
+									</a>
+								</td>
+								</td>
+							</tr>
+							<?php
+                $i++;
+                    }
+              ?>
+						<?php else: ?>
+							<tr>
+								<td colspan="7" align="center"><h1>ID Yang di Cari Tidak Tersedia</h1></td>
+							</tr>
+						<?php endif; ?>
 				</tbody>
 			</table>
 
