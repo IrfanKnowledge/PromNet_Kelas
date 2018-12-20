@@ -17,7 +17,6 @@ $connection=mysqli_connect('localhost', 'root', '', 'karyawan');
   case 'PUT':    // POST – menambahkan produkl baru
              $product_id=intval($_GET["product_id"]);    update_product($product_id);
              break;
-  case 'PUT':    // PUT - mengupdate produk tertentu    $product_id=intval($_GET["product_id"]);    update_product($product_id);    break
 
   case 'DELETE':    // DELETE – menghapus produk tertentu
                 $product_id=intval($_GET["product_id"]);    delete_product($product_id);
